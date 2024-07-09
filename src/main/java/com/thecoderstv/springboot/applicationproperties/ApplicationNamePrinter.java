@@ -1,4 +1,4 @@
-package com.thecoderstv.springboot;
+package com.thecoderstv.springboot.applicationproperties;
 
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.context.annotation.ComponentScan;
