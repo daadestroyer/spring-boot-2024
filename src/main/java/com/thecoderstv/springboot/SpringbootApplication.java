@@ -12,8 +12,10 @@ public class SpringbootApplication {
 	public static void main(String[] args) {
 
 		ConfigurableApplicationContext context = SpringApplication.run(SpringbootApplication.class, args);
-		ApplicationNamePrinter app = context.getBean("applicationNamePrinter", ApplicationNamePrinter.class);
-		System.out.println(app);
+//		ApplicationNamePrinter app = context.getBean("applicationNamePrinter", ApplicationNamePrinter.class);
+//		System.out.println(app);
+
+
 	}
 
 }
