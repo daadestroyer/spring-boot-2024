@@ -12,4 +12,5 @@ public class AdminController {
     public String welcomeAdmin() {
         return "welcome back admin";
     }
+
 }
