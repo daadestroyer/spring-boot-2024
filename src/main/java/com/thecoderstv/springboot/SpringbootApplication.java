@@ -90,7 +90,7 @@ public class SpringbootApplication {
        //  userRepositories.deleteAll();
 
         // fetching all records
-
+        /*
         List<User> userList = userRepositories.findAll();
         if(userList.size()==0){
             System.out.println("no records found");
@@ -98,6 +98,55 @@ public class SpringbootApplication {
         else{
             userList.forEach(System.out::println);
         }
+        */
 
+        // findbyemail
+        /*
+        Optional<User> optionalUser = userRepositories.findByEmail("rekhaa@gmail.com");
+        if(optionalUser.isPresent()){
+            System.out.println(optionalUser.get());
+        }
+        else{
+            System.out.println("no records");
+        }
+         */
+
+        // findByFirstNameAndLastName
+        /*
+        Optional<User> optionalUser = userRepositories.findByFirstnameAndLastname("shubham", "singh");
+        if(optionalUser.isPresent()){
+            System.out.println(optionalUser.get());
+        }
+        else{
+            System.out.println("no record");
+        }
+         */
+
+        // findByFirstnameOrLastname
+        /*
+        Optional<User> optionalUser = userRepositories.findByFirstnameOrLastname("shubhamm", "singh");
+        if(optionalUser.isPresent()){
+            System.out.println(optionalUser.get());
+        }
+        else{
+            System.out.println("no record");
+        }
+        */
+
+        // findByFirstnameStartingWith
+        /*
+        List<User> s = userRepositories.findByFirstnameStartingWith("S");
+        s.forEach(System.out::println);
+         */
+
+        // findByFirstnameEndingWith
+        /*
+        List<User> m = userRepositories.findByLastnameEndingWith("m");
+        m.forEach(System.out::println);
+        */
+
+        // findByFirstnameContaining
+        List<User> b = userRepositories.findByFirstnameContaining("a");
+        b.forEach(System.out::println);
     }
 }
