@@ -58,6 +58,7 @@ public class SpringbootApplication {
         */
 
         // update records
+        /*
         Optional<User> optionalUser = userRepositories.findById(102);
         if(optionalUser.isPresent()){
             User dbUser = optionalUser.get();
@@ -67,6 +68,16 @@ public class SpringbootApplication {
             dbUser.setEmail("pankajnew@gmail.com");
             User updatedUser = userRepositories.save(dbUser);
             System.out.println(updatedUser);
+        }
+        else{
+            System.out.println("no user found");
+        }
+        */
+
+        // fetching single record
+        Optional<User> optionalUser = userRepositories.findById(105);
+        if(optionalUser.isPresent()){
+            System.out.println(optionalUser.get());
         }
         else{
             System.out.println("no user found");
