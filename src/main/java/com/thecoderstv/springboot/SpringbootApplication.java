@@ -9,6 +9,7 @@ import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.context.ConfigurableApplicationContext;
 
+import java.util.List;
 import java.util.Optional;
 
 // @SpringBootApplication = @Configuration + @EnableAutoConfiguration + @ComponentScan
@@ -75,6 +76,7 @@ public class SpringbootApplication {
         */
 
         // fetching single record
+        /*
         Optional<User> optionalUser = userRepositories.findById(105);
         if(optionalUser.isPresent()){
             System.out.println(optionalUser.get());
@@ -82,7 +84,20 @@ public class SpringbootApplication {
         else{
             System.out.println("no user found");
         }
+         */
 
+        // deleting all records
+       //  userRepositories.deleteAll();
+
+        // fetching all records
+
+        List<User> userList = userRepositories.findAll();
+        if(userList.size()==0){
+            System.out.println("no records found");
+        }
+        else{
+            userList.forEach(System.out::println);
+        }
 
     }
 }
