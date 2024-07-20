@@ -87,7 +87,7 @@ public class SpringbootApplication {
          */
 
         // deleting all records
-       //  userRepositories.deleteAll();
+        //  userRepositories.deleteAll();
 
         // fetching all records
         /*
@@ -146,7 +146,87 @@ public class SpringbootApplication {
         */
 
         // findByFirstnameContaining
+        /*
         List<User> b = userRepositories.findByFirstnameContaining("a");
         b.forEach(System.out::println);
+         */
+
+        // findUserByEmailJPQL
+        /*
+        Optional<User> userOptional = userRepositories.findByEmailJPQL("pankaj@gmail.com");
+        if(userOptional.isPresent()){
+            System.out.println(userOptional.get());
+        }
+        else{
+            System.out.println("not found");
+        }
+         */
+
+        // findUserByEmailNativeQuery
+        /*
+        Optional<User> optionalUser = userRepositories.findByEmailNativeQuery("pankaj@gmail.com");
+        if(optionalUser.isPresent()){
+            System.out.println(optionalUser.get());
+        }
+        else{
+            System.out.println("not found");
+        }
+
+         */
+
+        // findByFirstnameAndLastnameJPQL
+        /*
+        Optional<User> optionalUser = userRepositories.findByFirstnameAndLastnameJPQL("shubham", "nigam");
+        if(optionalUser.isPresent()){
+            System.out.println(optionalUser.get());
+        }
+        else{
+            System.out.println("not found");
+        }
+
+         */
+
+        // findByFirstnameAndLastnameNativeQuery
+        /*
+        Optional<User> optionalUser = userRepositories.findByFirstnameAndLastnameNativeQuery("rekha", "nigam");
+        if(optionalUser.isPresent()){
+            System.out.println(optionalUser.get());
+        }
+        else{
+            System.out.println("not found");
+        }
+
+         */
+
+        // findByFirstnameOrLastnameJPQL
+        /*
+        Optional<User> userOptional = userRepositories.findByFirstnameOrLastnameJPQL("shubham1", "singh");
+        if(userOptional.isPresent()){
+            System.out.println(userOptional.get());
+        }
+        else{
+            System.out.println("not found");
+        }
+*/
+        // findByFirstnameOrLastnameNative
+        /*
+        Optional<User> userOptional = userRepositories.findByFirstnameOrLastnameNative("shubham1", "singh");
+        if(userOptional.isPresent()){
+            System.out.println(userOptional.get());
+        }
+        else{
+            System.out.println("not found");
+        }
+         */
+
+        // findByFirstnameOrLastnameNative
+        Optional<User> userOptional = userRepositories.findByFirstnameOrLastnameJPQL("raj", "singh");
+        if (userOptional.isPresent()) {
+            System.out.println(userOptional.get());
+        } else {
+
+            System.out.println("not found");
+        }
+
     }
 }
