@@ -19,11 +19,12 @@ public class SpringbootApplication {
 
     public static void main(String[] args) {
         ConfigurableApplicationContext context = SpringApplication.run(SpringbootApplication.class, args);
+        context.close();
 //       ApplicationNamePrinter app = context.getBean("applicationNamePrinter", ApplicationNamePrinter.class);
 //        System.out.println(app);
 
 
-        UserRepositories userRepositories = context.getBean(UserRepositories.class);
+//        UserRepositories userRepositories = context.getBean(UserRepositories.class);
 
 
         // saving user to database
@@ -220,13 +221,13 @@ public class SpringbootApplication {
          */
 
         // findByFirstnameOrLastnameNative
-        Optional<User> userOptional = userRepositories.findByFirstnameOrLastnameJPQL("raj", "singh");
-        if (userOptional.isPresent()) {
-            System.out.println(userOptional.get());
-        } else {
-
-            System.out.println("not found");
-        }
+//        Optional<User> userOptional = userRepositories.findByFirstnameOrLastnameJPQL("raj", "singh");
+//        if (userOptional.isPresent()) {
+//            System.out.println(userOptional.get());
+//        } else {
+//
+//            System.out.println("not found");
+//        }
 
     }
 }
