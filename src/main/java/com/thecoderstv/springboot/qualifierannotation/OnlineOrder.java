@@ -1,4 +1,4 @@
-package com.thecoderstv.springboot.bean;
+package com.thecoderstv.springboot.qualifierannotation;
 
 import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.stereotype.Component;

@@ -19,9 +19,9 @@ public class SpringbootApplication {
 
     public static void main(String[] args) {
         ConfigurableApplicationContext context = SpringApplication.run(SpringbootApplication.class, args);
-        context.close();
+
 //       ApplicationNamePrinter app = context.getBean("applicationNamePrinter", ApplicationNamePrinter.class);
-//        System.out.println(app);
+//        System.out.println(a;pp)
 
 
 //        UserRepositories userRepositories = context.getBean(UserRepositories.class);
@@ -228,6 +228,5 @@ public class SpringbootApplication {
 //
 //            System.out.println("not found");
 //        }
-
     }
 }

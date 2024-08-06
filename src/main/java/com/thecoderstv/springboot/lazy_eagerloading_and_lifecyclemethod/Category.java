@@ -1,4 +1,4 @@
-package com.thecoderstv.springboot.bean;
+package com.thecoderstv.springboot.lazy_eagerloading_and_lifecyclemethod;
 
 import org.springframework.context.annotation.Lazy;
 import org.springframework.stereotype.Component;
@@ -6,7 +6,8 @@ import org.springframework.stereotype.Component;
 @Component
 @Lazy
 public class Category {
-//    public Category(){
+    public Category(){
+
 //        System.out.println("Initializing Category");
-//    }
+    }
 }

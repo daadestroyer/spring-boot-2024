@@ -1,5 +1,6 @@
-package com.thecoderstv.springboot.bean;
+package com.thecoderstv.springboot.qualifierannotation;
 
+import com.thecoderstv.springboot.qualifierannotation.Order;
 import jakarta.annotation.PostConstruct;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Qualifier;
@@ -12,10 +13,12 @@ public class Customer {
     Order order;
 
     public Customer() {
-        System.out.println("Customer initialized");
+
+//        System.out.println("Customer initialized");
     }
     @PostConstruct
     public void initialize(){
-        order.getDetails();
+
+//        order.getDetails();
     }
 }
