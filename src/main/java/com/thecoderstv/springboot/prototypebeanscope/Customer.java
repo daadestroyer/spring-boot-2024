@@ -6,13 +6,13 @@
 //
 //@Component
 //@Scope("prototype")
-//public class Employee {
-//    public Employee() {
-//        System.out.println("Employee initializing");
+//public class Customer {
+//    public Customer() {
+//        System.out.println("Customer Initializing");
 //    }
 //
 //    @PostConstruct
-//    public void init() {
-//        System.out.println("Employee initialized --- Employee hashcode --" + this.hashCode());
+//    public void init(){
+//        System.out.println("Customer Initialized ---- Customer Hashcode = "+this.hashCode());
 //    }
 //}
