@@ -4,6 +4,8 @@ import com.thecoderstv.springboot.applicationproperties.ApplicationNamePrinter;
 import com.thecoderstv.springboot.bean.User;
 import com.thecoderstv.springboot.repositories.UserRepositories;
 
+
+import com.thecoderstv.springboot.waystocreatebean.Student;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
@@ -19,6 +21,11 @@ public class SpringbootApplication {
 
     public static void main(String[] args) {
         ConfigurableApplicationContext context = SpringApplication.run(SpringbootApplication.class, args);
+//        Student student = context.getBean("student", Student.class);
+
+//        student.getDetails();
+
+
 
 //       ApplicationNamePrinter app = context.getBean("applicationNamePrinter", ApplicationNamePrinter.class);
 //        System.out.println(a;pp)
